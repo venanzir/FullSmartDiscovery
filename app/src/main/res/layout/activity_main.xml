@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.riccardovenanzi.fullsmartdiscovery.MainActivity">
+
+    <Switch
+        android:text="Wifi P2P"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:id="@+id/wifip2pswitch2"
+        android:layout_below="@+id/bleSwitch"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Discovery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wifip2pswitch2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="105dp"
+        android:id="@+id/discoveryButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_below="@+id/discoveryButton"
+        android:layout_marginTop="30dp"
+        android:id="@+id/resultArea"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Peer Discovered ..."
+        android:singleLine="false"
+        android:enabled="false" />
+
+    <TextView
+        android:text="Discovery Type:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/discoveryLabel"
+        android:textSize="18sp"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/wifip2pswitch2"
+        android:layout_toStartOf="@+id/discoveryButton" />
+
+    <CheckBox
+        android:text=" BLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bleCB"
+        android:layout_alignBottom="@+id/discoveryLabel"
+        android:layout_alignEnd="@+id/discoveryButton"
+        android:layout_marginEnd="12dp" />
+
+    <CheckBox
+        android:text=" Wifi P2P"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wifiCB"
+        android:layout_marginRight="36dp"
+        android:layout_alignBottom="@+id/bleCB"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/bleCB" />
+
+    <Switch
+        android:text="MQTT Connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swMqtt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Switch
+        android:text="BLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:id="@+id/bleSwitch"
+        android:layout_below="@+id/swMqtt"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:id="@+id/smartCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/discoveryLabel"
+        android:layout_alignParentStart="true"
+        android:text="Smart Mode" />
+</RelativeLayout>
